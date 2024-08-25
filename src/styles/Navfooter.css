@@ -1,0 +1,38 @@
+.nav-footer{
+    padding-bottom: 6px;
+    border-bottom: 2px solid #3F434E;
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    list-style-type: none;
+    margin-right: 75px;
+}
+
+.nav-footer li {
+    font-family: gothic;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 100;
+    text-underline-offset: 10px;
+}
+
+.nav-footer li.selected {
+    color: #B3E44D;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 567px) {
+    .nav-footer{
+        padding-bottom: 6px;
+        gap: 35px;
+        margin-right: 0px;
+    }
+
+    .nav-footer li {
+        font-family: gothic;
+        font-size: 22px;
+        color: #ffffff;
+        font-weight: 100;
+        text-underline-offset: 10px;
+    }
+  }

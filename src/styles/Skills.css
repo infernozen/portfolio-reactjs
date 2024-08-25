@@ -1,0 +1,324 @@
+p {
+  font-family: gothic;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.Skills-Background {
+  background-color: #353942;
+  height: 130vh;
+  width: 100%;
+}
+
+.tech-title{
+  position: relative;
+  top: 40px;
+  left: 125px;
+  width: 300px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 45px;
+  color: #ffffff;
+  gap: 5px;
+}
+
+#unlimited-grn{
+  width: 90px;
+  height: auto;
+}
+
+.tech-stack {
+  top: 70px;
+  height: auto;
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.tech-selectors {
+  height: 20vh;
+  width: 70%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tech-option {
+  height: 20vh;
+  width: 20%;
+  background-color: #383c45;
+  border: 3px solid #2b2f38;
+}
+
+.tech-showcase {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: auto; 
+  width: 100%;
+  background-color: #2b2f38;
+}
+
+.tech-showcase-spheres{
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 90%;
+  position: relative;
+  bottom: 0;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px; 
+}
+
+.tech-showcase .tech-sphere {
+    margin-left: clamp(10px, 3vh, 30px); 
+    margin-right: clamp(10px, 3vh, 28px); 
+}
+
+.tech-sphere {
+  width: clamp(90px, 10vw, 120px);
+  height: clamp(90px, 10vw, 120px);
+  border-radius: 50%;
+  /* background-image: linear-gradient(
+    180deg,
+    rgba(155, 254, 23, 1),
+    rgba(36, 243, 8, 1)
+  ); */
+  /* background: linear-gradient(to bottom, #dc2424, #4a569d);  */
+  background: linear-gradient(to bottom, #dce35b, #45b649);
+  
+  position: relative;
+  perspective: 800px; /* Perspective for 3D effect */
+  animation: bounceIcon 1.5s ease infinite; 
+}
+
+.tech-sphere:after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  top: 56%;
+  z-index: -1;
+  box-shadow: 7px 100px 30px #ffffff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transform: rotateX(70deg);
+  animation: hover-shadow 1.5s ease 0s infinite;
+  
+}
+
+@keyframes bounceIcon {
+  0%,
+  100% {
+    transform: translateY(0); /* Start and end position */
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes hover-shadow {
+  0% {
+    box-shadow: 7px 100px 30px #ffffff;
+  }
+
+  50% {
+    box-shadow: 7px 120px 40px #ffffff;
+  }
+
+  100% {
+    box-shadow: 7px 100px 30px #ffffff;
+  }
+}
+
+.tech-icon {
+  height: 60%;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /* Adjust the scale to fit the icon */
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.tech-icon:hover {
+  animation: rotateAnimation 1s linear infinite; /* Rotate animation */
+}
+
+.selected-tech {
+    background-color: #b3e44d; 
+    border: 3px solid #ffffff;
+    color: #000; 
+}
+
+.selected-tech path{
+  fill: #000;
+}
+
+#skills-logo{
+  display: none;
+}
+
+@media (max-width: 567px){
+  .Skills-Background {
+    height: 100vh;
+    min-height: 700px;
+  }
+
+  .tech-title{
+    position: relative;
+    font-size: 48px;
+    top: 40px;
+    left: 20px;
+  }
+
+  .tech-stack {
+    top: 70px;
+    height: 55vh;
+    width: 90%;
+    gap: 50px;
+  }
+
+  .tech-selectors {
+    height: 20vh;
+    width: 100%;
+    max-height: 100px;
+    position: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tech-option {
+    height: 18vw;
+    width: 20%;
+    background-color: #383c45;
+    border: 3px solid #2b2f38;
+  }
+
+  .selected-tech {
+    background-color: #b3e44d; 
+    border: 3px solid #ffffff;
+    color: #000; 
+  }
+
+  .selected-tech path{
+    fill: #000;
+  }
+
+  .tech-showcase-spheres{
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 90%;
+    gap: 30px 5px; 
+  }
+
+  .tech-showcase .tech-sphere {
+    margin-left: 0; 
+    margin-right: 0;
+  }
+
+  @keyframes hover-shadow {
+    0% {
+      box-shadow: 0px 75px 30px #ffffff;
+    }
+  
+    50% {
+      box-shadow: 0px 85px 40px #ffffff;
+    }
+  
+    100% {
+      box-shadow: 0px 75px 30px #ffffff;
+    }
+  }
+
+  .tech-showcase {
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: 355px) and (max-width: 360px){
+    .tech-title{
+      top: 30px;
+      height: 90px;
+      font-size: 45px;
+      gap: 5px;
+    }
+
+    #unlimited-grn{
+      width: 80px;
+    }
+  }
+
+  @media (max-width: 355px){
+    .tech-sphere {
+      width: 80px;
+      height: 80px;
+    }
+
+    .tech-title{
+      top: 30px;
+      height: 90px;
+      font-size: 42px;
+      gap: 5px;
+    }
+
+    #unlimited-grn{
+      width: 80px;
+    }
+
+    .tech-stack {
+      top: 60px;
+    }
+
+  }
+
+  @media (min-width: 439px){
+    .tech-sphere {
+      width: 100px;
+      height: 100px;
+    }
+
+    .tech-title{
+      font-size: 48px;
+    }
+  }
+
+  @media (min-width: 484px){
+    .tech-title{
+      font-size: 50px;
+      gap: 10px;
+    }
+
+    .tech-showcase .tech-sphere {
+      margin-left: clamp(10px, 3vh, 15px); 
+      margin-right: clamp(10px, 3vh, 15px); 
+    }
+  }
+
+  @media (min-height: 750px){
+    #skills-logo{
+      display: block;
+      width: 45px;
+      height: auto;
+      position: relative;
+      left: 50%; /* Move the element to the center horizontally */
+      transform: translateX(-50%); /* Adjust back by half of its own width */
+      bottom: -185px;
+    }
+  }
+}

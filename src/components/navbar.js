@@ -1,0 +1,34 @@
+import React, { useState } from "react";
+import '../styles/Navbar.css';
+
+const Navbar = (props) => {
+    const [selectedItem, setSelectedItem] = useState("home");
+
+    const handleItemClick = (item) => {
+        setSelectedItem(item);
+    };
+
+    return (
+        <nav className={props.className}>
+            <ul className="nav-list">
+                <li className={selectedItem === "home" ? "selected" : ""} onClick={() => handleItemClick("home")}>
+                    HOME
+                </li>
+                <li className={selectedItem === "about" ? "selected" : ""} onClick={() => handleItemClick("about")}>
+                    ABOUT
+                </li>
+                <li className={selectedItem === "projects" ? "selected" : ""} onClick={() => handleItemClick("projects")}>
+                    PROJECTS
+                </li>
+                <li className={selectedItem === "tools" ? "selected" : ""} onClick={() => handleItemClick("tools")}>
+                    TOOLS
+                </li>
+                <li className={selectedItem === "contact" ? "selected" : ""} onClick={() => handleItemClick("contact")}>
+                    CONTACT
+                </li>
+            </ul>
+        </nav>
+    );
+};
+
+export default Navbar;

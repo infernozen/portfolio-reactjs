@@ -1,0 +1,328 @@
+p {
+    font-family: gothic;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.Overview-Background {
+    background-color: #353942;
+    height: 140vh;
+    width: 100%;
+}
+
+.overview-container {
+    position: relative;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 115vh;
+    background-color: #2C3039;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #2b2f38;
+}
+
+.overview-title {
+    padding-left: 44px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-family: gothic;
+    font-size: 40px;
+    color: white;
+}
+
+.overview-title br{
+    display: none;
+}
+
+.overview-sub{
+    display: flex;
+    height: 100vh;
+}
+
+.overview-options{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: gothic;
+    width: 200px;
+    color: #6C7187;
+    gap: 30px;
+    font-size: 26px;
+}
+
+.overview-showcase{
+    background-color: #383C45;
+    width: 100%;
+    height: auto;
+}
+
+.overview-options div{
+    padding-left: 10px;
+}
+
+.selected-overview{
+    color: #ffffff;
+    border-left: 3px solid #B3E44D;
+}
+
+.grid-showcase{
+    height: 94vh;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 10px; 
+    column-gap: 0px;
+    overflow: auto;
+}
+
+#option-dot{
+    display: inline;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 40px;
+    margin-left: clamp(40px, 5%, 50px);
+    margin-right: 30px;
+    background-color: #323641;
+    height: 290px;
+    width: clamp(290px, 80%, 350px);
+    border-radius: 25px;
+    border: 1px solid #787878;
+}
+
+.showcase-img{
+    width: 90%;
+    height: 60%;
+    background-color: #1A1C1B;
+    border-radius: 25px;
+}
+
+.showcase-text {
+    width: 90%;
+    color: white;
+    font-family: gothic;
+    font-size: 24px;
+    height: 2em;
+    overflow: hidden; /* Hide any content that overflows the box */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit the number of lines */
+    -webkit-box-orient: vertical;
+}
+
+.item-type{
+    position: relative;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 2;
+    width: 55%;
+    font-family: gothic;
+    color: #000000;
+    font-size: 20px;
+    background-color: #B3E44D;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.showcase-link a{
+    font-family: gothic;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 2px;
+    text-decoration: none;
+    background-color: #FFFF45;
+    color: #000;
+}
+
+.showcase-image{
+    z-index: 1;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: relative;
+    height: auto;
+}
+
+.grid-showcase::-webkit-scrollbar {
+    width: 6px; 
+}
+
+/* Track */
+.grid-showcase::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Handle */
+.grid-showcase::-webkit-scrollbar-thumb {
+    background: #7E889D; 
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+.grid-showcase::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+@media (max-width: 567px){
+    .Overview-Background {
+        background-color: #2C3039;
+        height: 100vh;
+    }
+
+    .overview-container {
+        top: 20px;
+        width: 95%;
+        height: calc(100vh - 25px);
+        background-color: #2C3039;
+    }
+
+    .overview-title{
+        padding-top: 25px;
+        padding-left: 10px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .overview-title br{
+        display: none;
+    }
+
+    .overview-sub{
+        display: flex;
+        flex-direction: column;
+        height: 82vh;
+        flex: 1;
+    }
+
+    .overview-options{
+        padding-top: 10px;
+        padding-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #option-dot{
+        display: none;
+    }
+
+    .showcase-link {
+        margin-bottom: 3px;
+    }
+
+    .showcase-link a{
+        padding: 4px;
+    }
+
+    .overview-options div{
+        padding-left: 0px;
+    }
+
+    .selected-overview{
+        color: #ffffff;
+        border-left: none;
+        border-bottom: 3px solid #B3E44D;
+    }
+
+    .grid-showcase{
+        height: 82vh;
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .grid-item {
+        gap: 10px;
+        margin-top: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 220px;
+        width: 43vw;
+    }
+
+    .showcase-text {
+        font-size: 17px;
+    }
+
+    .item-type{
+        font-size: 16px;
+    }
+
+    .grid-showcase::-webkit-scrollbar {
+        width: 4px; 
+    }
+
+    @media (min-width: 480px){
+        .overview-options{
+            font-size: 28px;
+        }
+    }
+
+    @media (max-width: 400px){
+        .overview-options{
+            font-size: 22px;
+        }
+    }
+
+    @media (max-width: 350px){
+        .overview-options{
+            font-size: 19px;
+        }
+    }
+
+    @media (max-width: 384px) {
+        .grid-item {
+            height: 180px;
+            width: 43vw;
+        }
+
+        .showcase-link a{
+            font-size: 16px;
+        }
+
+        .showcase-link {
+            margin-bottom: 10px;
+        }
+
+        .showcase-text {
+            width: 90%;
+            font-size: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Limit the number of lines */
+            -webkit-box-orient: vertical;
+        }
+
+        .item-type{
+            font-size: 13px;
+            border-top-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        .grid-showcase{
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        .showcase-img{
+            margin-top: 5px;
+            height: 53%;
+        }
+
+        .showcase-image{
+            top: 27%;
+        }
+
+        .grid-showcase::-webkit-scrollbar {
+            width: 3px; 
+        }
+    }
+
+}
